@@ -1,82 +1,170 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>中央市 地域おこし協力隊 募集</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <img src="images/image.png" alt="トマト農園の写真" class="hero-img">
-    <div class="hero-text">
-      <h1>中央市地域おこし協力隊募集</h1>
-      <p>ともに、昔ながらの農業を守りつつ、<br>農業に新たな風を巻き起こしませんか？</p>
-      <a href="#apply" class="cta-button">応募する</a>
-    </div>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <main class="content">
-    <section class="intro">
-      <h2>農業 × テクノロジー × まちづくり</h2>
-      <p>中央市では、伝統的な農業の価値を継承しながらも、<br>クラウドファンディング、六次産業化、ブランド化など先進的な取り組みを実践しています。</p>
-    </section>
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
 
-    <section class="mission">
-      <h2>あなたにお願いしたいミッション</h2>
-      <div class="card-grid">
-        <div class="card">中央市の農業の再興とリブランディング</div>
-        <div class="card">栽培技術の継承と技術革新</div>
-        <div class="card">担い手の確保と耕作放棄地の活用</div>
-        <div class="card">魅力ある農業の情報発信</div>
-        <div class="card">ふるさと納税による特産品開発</div>
-        <div class="card">六次産業化商品の開発</div>
-      </div>
-    </section>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    <section class="image-showcase">
-      <h2>活動エリア：山梨県 中央市</h2>
-      <img src="images/image.png" alt="農園写真">
-    </section>
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
 
-    <section class="requirements" id="apply">
-      <h2>募集要項</h2>
-      <ul>
-        <li><strong>年齢：</strong>20歳〜49歳（性別不問）</li>
-        <li><strong>居住：</strong>中央市に住民票を移せる方</li>
-        <li><strong>免許：</strong>普通自動車運転免許 必須</li>
-        <li><strong>PCスキル：</strong>Word・Excel等の基本操作</li>
-        <li><strong>報償費：</strong>月額266,000円（最大3年間）</li>
-        <li><strong>住居補助：</strong>上限4万円/月</li>
-        <li><strong>活動車両・保険・消耗品支給</strong></li>
-      </ul>
-      <a href="mailto:info@yodafarm.jp" class="cta-button">今すぐ応募・問い合わせる</a>
-    </section>
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
-    <section class="faq">
-      <h2>よくある質問</h2>
-      <div class="qa">
-        <p><strong>Q:</strong> 農業経験がありませんが大丈夫ですか？</p>
-        <p><strong>A:</strong> はい、未経験者も大歓迎です。研修やサポート体制があります。</p>
-      </div>
-      <div class="qa">
-        <p><strong>Q:</strong> 家族で移住することは可能ですか？</p>
-        <p><strong>A:</strong> 可能です。条件により住居支援もあります。</p>
-      </div>
-    </section>
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+  z-index: 1;
+}
 
-    <section class="contact">
-      <h2>お問い合わせ・SNS</h2>
-      <p><a href="mailto:info@yodafarm.jp">info@yodafarm.jp</a></p>
-      <p><a href="https://www.instagram.com/takayuki_yodafarm/" target="_blank">@takayuki_yodafarm</a></p>
-      <p><a href="https://www.instagram.com/yodafarm.kitchen/" target="_blank">@yodafarm.kitchen</a></p>
-    </section>
-  </main>
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
 
-  <footer class="footer">
-    <p>&copy; 2025 中央市地域おこし協力隊</p>
-  </footer>
-</body>
-</html>
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #00aa55;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #008a44;
+}
+
+/* Content */
+.content {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.section,
+.intro,
+.requirements,
+.faq,
+.contact {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+p, li {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image-showcase img {
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.qa p {
+  margin-bottom: 0.5rem;
+}
+
+.contact a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #00aa55;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
